@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-const [data, setData] = useState(null);
+const [data, setData] = useState<any>(null);
   
   useEffect(() => {
     fetch("/api/weather?latitude=39.1367&longitude=-84.5030&timezone=America/New_York")
       .then((res) => res.json())
-      .then(setData);
+      .then((d) => setData(d));
   }, []);
 
   if (!data) return <p style={{ padding: 20 }}>Loading weather...</p>;
