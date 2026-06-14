@@ -6,7 +6,7 @@ import { fetchWeatherData } from '../../services/weather.service';
 
 
 // Define a specific GUID value
-const VALID_TOKEN = '123e4567-e89b-12d3-a456-426614174001';
+// const VALID_TOKEN = '123e4567-e89b-12d3-a456-426614174001';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {  
   // Get latitude and longitude from query parameters
